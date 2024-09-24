@@ -15,8 +15,8 @@ type_car = px.bar(car_data, x="type", color='type')  # Grafica
 st.plotly_chart(type_car, use_container_width=True)  # Impresion de grafica
 print()
 # Check Box de los años de los carros
-car_year = st.checkbox("Años de los Carros")
-if car_year:
+car_year_button = st.button("Años de los Carros")
+if car_year_button:
     st.write('Años de los carros')
     year_fig = px.histogram(car_data, x='model_year')
     st.plotly_chart(year_fig, use_container_width=True)
